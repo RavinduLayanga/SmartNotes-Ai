@@ -54,7 +54,8 @@ export default async function DashboardPage() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {notes.map((note) => (
-            <div
+            <Link
+              href={`/dashboard/${note.id}`}
               key={note.id}
               className="bg-slate-900 border border-slate-800 rounded-xl p-5 hover:border-slate-600 transition-colors flex flex-col h-64"
             >
@@ -67,14 +68,11 @@ export default async function DashboardPage() {
 
               <div className="mt-auto pt-4 border-t border-slate-800 flex justify-between items-center text-xs text-slate-500">
                 <span>{new Date(note.created_at).toLocaleDateString()}</span>
-                <Link
-                  href={`/dashboard/${note.id}`}
-                  className="text-blue-500 hover:text-blue-400 font-medium"
-                >
-                  Open →
-                </Link>
+                <span className="text-slate-600 group-hover:text-blue-500 transition-colors font-medium">
+                  View →
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}

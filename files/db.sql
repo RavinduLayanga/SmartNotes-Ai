@@ -1,6 +1,6 @@
--- 1. Users Table 
+-- 1. Users Table
 CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name VARCHAR(255),
   email VARCHAR(255) UNIQUE,
   "emailVerified" TIMESTAMPTZ,
@@ -9,8 +9,8 @@ CREATE TABLE users (
  
 -- 2. Accounts Table 
 CREATE TABLE accounts (
-  id SERIAL PRIMARY KEY,
-  "userId" INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  "userId" UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   type VARCHAR(255) NOT NULL,
   provider VARCHAR(255) NOT NULL,
   "providerAccountId" VARCHAR(255) NOT NULL,
@@ -25,8 +25,8 @@ CREATE TABLE accounts (
  
 -- 3. Sessions Table 
 CREATE TABLE sessions (
-  id SERIAL PRIMARY KEY,
-  "userId" INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  "userId" UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   expires TIMESTAMPTZ NOT NULL,
   "sessionToken" VARCHAR(255) NOT NULL UNIQUE
 );
@@ -41,8 +41,8 @@ CREATE TABLE verification_token (
 
 -- 5. Notes Table 
 CREATE TABLE notes (
-  id SERIAL PRIMARY KEY,
-  user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   title VARCHAR(255) NOT NULL,
   content TEXT NOT NULL,
   summary TEXT,
