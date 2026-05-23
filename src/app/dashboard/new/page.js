@@ -45,9 +45,9 @@ export default function NewNotePage() {
         <div>
           <div className="flex justify-between items-end mb-2">
             <label className="block text-sm font-medium text-slate-300">
-              Brain Dump
+              Note Content
             </label>
-            {/* 👈 The Counter UI */}
+
             <span
               className={`text-xs ${textLength > MAX_CHARS * 0.9 ? "text-red-400" : "text-slate-500"}`}
             >

@@ -66,6 +66,17 @@ export default async function DashboardPage() {
                 {note.content}
               </p>
 
+              {note.summary && (
+                <div className="mt-auto mb-4 p-3 bg-indigo-950/30 border border-indigo-900/50 rounded-lg flex-grow">
+                  <p className="text-xs text-indigo-400 font-semibold mb-1 flex items-center gap-1">
+                    ✨ AI Summary
+                  </p>
+                  <p className="text-xs text-indigo-200/70 line-clamp-2">
+                    {note.summary}
+                  </p>
+                </div>
+              )}
+
               <div className="mt-auto pt-4 border-t border-slate-800 flex justify-between items-center text-xs text-slate-500">
                 <span>{new Date(note.created_at).toLocaleDateString()}</span>
                 <span className="text-slate-600 group-hover:text-blue-500 transition-colors font-medium">

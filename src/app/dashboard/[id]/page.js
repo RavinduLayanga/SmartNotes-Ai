@@ -24,7 +24,7 @@ export default async function SingleNotePage({ params }) {
   const note = fetchedNotes[0];
 
   return (
-    <div className="max-w-3xl mx-auto p-4 pt-24">
+    <div className="w-full max-w-[1600px] mx-auto p-4 pt-24">
       <Link
         href="/dashboard"
         className="text-slate-400 hover:text-white transition mb-8 inline-block"
