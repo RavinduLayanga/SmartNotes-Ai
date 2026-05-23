@@ -11,7 +11,7 @@ export default function AuthButton({ session }) {
         href="/dashboard"
         className="bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-all shadow-md flex items-center gap-1"
       >
-        Go to Dashboard <span className="text-xs">→</span>
+        Go to Dashboard
       </Link>
     );
   }

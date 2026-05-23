@@ -12,7 +12,7 @@ export default function NavbarPublic({ session }) {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Logo />
 
-        {/* Dynamic User Session Area */}
+        {/* User Session Area */}
         <div className="flex items-center md:order-2 space-x-3 relative">
           <AuthButton session={session} />
 

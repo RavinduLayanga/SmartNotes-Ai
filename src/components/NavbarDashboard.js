@@ -94,7 +94,7 @@ export default function NavbarDashboard({ session }) {
                 href="/dashboard"
                 className="block py-2 px-3 text-blue-500 font-semibold md:p-0"
               >
-                📝 My Notes
+                My Notes
               </a>
             </li>
             <li>
