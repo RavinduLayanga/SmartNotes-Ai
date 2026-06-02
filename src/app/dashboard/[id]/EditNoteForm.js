@@ -50,7 +50,7 @@ export default function EditNoteForm({ note }) {
                   {note.title}
                 </h1>
                 <p className="text-sm text-slate-500">
-                  Created on{" "}
+                  Updated on{" "}
                   {new Date(note.created_at).toLocaleString("en-GB", {
                     day: "2-digit",
                     month: "2-digit",
