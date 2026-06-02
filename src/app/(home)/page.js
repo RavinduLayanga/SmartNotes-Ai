@@ -12,7 +12,6 @@ export default function HomePage() {
         </p>
       </div>
 
-      {/* --- CARDS GRID --- */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto w-full text-left">
         {/* About the App */}
         <div className="bg-slate-900/40 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl hover:-translate-y-2 hover:bg-slate-900/50 hover:border-indigo-500/30 transition-all duration-300 group">
@@ -113,7 +112,7 @@ export default function HomePage() {
                 2
               </div>
               <p className="text-slate-400 text-sm mt-1">
-                Hit save and let Groq process the context dynamically.
+                Hit save and let SmartNotes Ai process the context dynamically.
               </p>
             </div>
             <div className="flex gap-4">

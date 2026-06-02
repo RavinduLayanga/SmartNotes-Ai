@@ -48,3 +48,9 @@ CREATE TABLE notes (
   summary TEXT,
   created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
+
+-- 6. Add role and API usage tracking to Users Table
+ALTER TABLE users 
+ADD COLUMN role TEXT DEFAULT 'user',
+ADD COLUMN api_count INTEGER DEFAULT 0,
+ADD COLUMN last_api_call TIMESTAMP;

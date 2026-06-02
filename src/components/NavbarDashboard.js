@@ -97,14 +97,14 @@ export default function NavbarDashboard({ session }) {
                 My Notes
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#"
                 className="block py-2 px-3 hover:text-blue-400 md:p-0"
               >
                 ⚙️ Settings
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
