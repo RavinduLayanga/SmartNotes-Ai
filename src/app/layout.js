@@ -1,4 +1,5 @@
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "SmartNotes AI",
@@ -8,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 text-slate-100">{children}</body>
+      <body className="bg-slate-950 text-slate-100">
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
